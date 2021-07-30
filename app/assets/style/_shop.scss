@@ -1,0 +1,72 @@
+
+
+.shop-body{
+    margin-bottom: 160px;
+    form{
+        margin-bottom: 32px;
+    }
+    label{
+        font-size: $h4-font-size;
+        margin-right: 20px;
+    }
+    select{
+        font-size: 18px;
+        color: #495057;
+        width: 324px;
+        height: 45px;
+        text-align: center;
+        padding: 8px 19px 11px;
+    }
+}
+.shop-list{
+    flex-wrap: wrap;
+    .shop-item{
+        width: 31%;
+        margin-right: 2%;
+        margin-bottom: 32px;
+        border-right: 1px solid #00000020;
+        border-left: 1px solid #00000020;
+    }
+    .shop-txt{
+        .shop-name{
+            font-size: $h4-font-size;
+            padding: 12px 24px;
+        }
+        ul{
+            padding: 16px 24px;
+            border-top: 1px solid #00000020;
+            font-size: $h5-font-size;
+            li{
+                margin-bottom: 8px;
+                i{margin-right: 10px;}
+            }
+        }
+        a{
+            background: #000;
+            color:#fff;
+            padding: 20px 0;
+            text-align: center;
+            transition: .2s;
+            &:hover{
+                font-size: $h5-font-size;
+                background: $primary-color;
+            }
+        }
+    }
+}
+.shop-location{
+    border: 1px solid #000;
+}
+.map{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

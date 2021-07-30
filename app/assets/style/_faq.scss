@@ -1,0 +1,22 @@
+.faq-title{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 36px;
+}
+.faq-body{
+    margin-bottom: 160px;
+}
+.faq-item{
+    margin-bottom: 32px;
+    li:last-child{
+        margin-bottom: 0;
+    }
+    h5{
+        font-size: $h5-font-size;
+        margin-bottom: 16px;
+        font-weight: 700;
+    }
+    p{
+        padding: 0 95px;
+    }
+}

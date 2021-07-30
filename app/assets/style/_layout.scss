@@ -1,0 +1,175 @@
+
+.header{
+    a{color:#fff;}
+    background: $primary-color;
+    padding: 0 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include pad{
+        padding: 0 39px;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
+    .logo{
+        a{
+            display: block;
+            background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true);
+            width: 80px;
+            height: 48px;
+            margin: 30px 0;
+            @include hide-text;}
+    }
+    @include mobile{
+        .logo a{
+            margin: 10px 0;}
+    }
+    .nav{
+        display: flex;
+        font-size: $h5-font-size;
+        @include mobile{
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        li{
+            margin-right: 64px;
+            @include pad{
+                margin-right: 40px;
+            }
+            @include mobile{
+                margin: 0px;
+                width: 50%;
+                border: 1px solid #fff;
+            }
+        }
+        li:last-child{
+            margin-right: 0;
+        }
+        a{
+            display: block;
+            position: relative;
+            transform: translateY(0px);
+            transition: .3s;
+            @include mobile{
+                padding: 8px 54px;
+            }
+            &:hover{
+                color:lighten($primary-color, 50%);
+                transform: translateY(-8px);
+                @include mobile{
+                    transform: translateY(0px);;
+                }
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                height: 0;
+                bottom: -8px;
+                border-bottom: 2px solid #fff;
+                transition: .25s;
+                }
+                &:hover:after{
+                    left: 0;
+                    right: 0;
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+}
+.footer{
+    a{
+        color:#fff;
+        transition: .25s;
+        &:hover{
+            color:lighten($primary-color, 50%);
+            transform: translateY(-8px);
+            border-bottom: 2px solid #fff;
+        }
+    }
+    background: $primary-color;
+    padding: 44px 0 40px;
+    @include pad{
+        padding: 39px 32px;
+    }
+    @include mobile{
+        padding: 24px 0px;
+    }
+    .footer-item{
+        justify-content: space-between;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        .footer-nav{
+            margin-bottom: 36px;
+            li{
+                margin-right: 48px;
+                @include pad{
+                    margin-right: 40px;
+                }
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+        .icon{
+            font-size: $h2-font-size;
+            line-height: 0;
+            li{
+                margin-left: 32px;
+                }
+                @include pad{
+                    font-size: $h4-font-size;
+                    li{
+                        margin-left: 24px;
+                    }
+                }
+        }
+        .address{
+            font-size: 36px;
+            i{
+                margin-right: 22px;
+            }
+            @include pad{
+                font-size: $h5-font-size;
+                li:first-child{
+                    margin-bottom: 12px;
+                }
+                i{
+                    margin-right: 11px;
+                }
+            }
+        }
+    }
+    .copyright{
+        color:#fff;
+        display: flex;
+        justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+        }
+        .privacy{
+            li{
+                 margin-left: 48px;
+                 @include pad{
+                     margin-left: 24px;
+                 }
+            }
+            @include mobile{
+                flex-direction: column;
+                p{
+                    margin-bottom: 8px;
+                }
+                li{
+                    margin-left: 0;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    }
